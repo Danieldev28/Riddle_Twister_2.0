@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Hind|Lexend+Mega|Roboto+Slab&display=swap');
+
+/*<-------------------------------------------My fonts to choose from*/
+/*font-family: 'Lexend Mega', sans-serif;*/
+/*font-family: 'Hind', sans-serif;*/
+/*font-family: 'Roboto Slab', serif;*/
+
+body{
+    background-color: #741BAB;
+}
+
+.title-text{
+   font-family: 'Lexend Mega', sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+}
+.margin-top{
+    margin-top: 79px;
+}
+
+button {
+    font-family: 'Lexend Mega', sans-serif;
+}
+
+input{
+    font-family: 'Lexend Mega', sans-serif;
+}
+
+.instruction-card{
+    box-sizing: border-box;
+    margin-top:50px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.text-title {
+    background-color:blue;
+}
