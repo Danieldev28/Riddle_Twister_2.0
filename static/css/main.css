@@ -45,3 +45,13 @@ input{
     margin-top: 40%;
   }
 }
+
+.font-hind {
+    font-family: 'Hind', sans-serif;
+    
+}
+
+/*does not work as intended fix css later*/
+/*a:hover { */
+/*  background-color: yellow;*/
+/*}*/

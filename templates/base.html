@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block head %} {% endblock %}
     <!--<link href="https://fonts.googleapis.com/css?family=Hind|Lexend+Mega|Roboto+Slab&display=swap" rel="stylesheet">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script type="text/javascript" src="main.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static' , filename= 'css/main.css')}}">
+    <script type="text/javascript" src="{{url_for('static' , filename= 'js/main.js')}}"></script>
+    <title>RiddleTwister2.0</title>
 </head>
 
 <body>
@@ -22,34 +23,32 @@
             <a href="/">
                 <h1 class="title-text">RiddleTwister!</h1>
             </a>
+            <a class="menuitem" id="login" href="/"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a class="menuitem" href="/leaderboard"><i class="fa fa-list-ol"></i> Leaderboard</a>
         </nav>
+        
     </header>
+     <div class="container">
+       
+       {% block content %} {% endblock %}
+    </div>
 
 
     <div class="container margin-top">
+        <!--<h2 class="display-2 mb-5 align-it-center" id="current-riddle">Get Ready...</h2>-->
+       
+    </div>
 
-        <div class="row">
-            <div class="col-12">
-                <form method="POST">
-                    <input type="text" id="answer-input" class="form-control form-control-lg adjust_input" name="player_name" placeholder="TYPE YOUR NAME HERE..." id="word-input" autofocus="">
-                    <!--<input type="text" class="form-control text-center" name="player_name" id="player_name" placeholder="TYPE YOUR NAME HERE...">-->
-                    <!--<button type="submit" class="col-md-12 btn btn-outline-success btn-round btn-custom">PLAY</button>-->
-                    <button type="button" class="btn btn-primary btn-lg btn-block">PLAY</button>
-                </form>
-            </div>
+    <!----wrap---->
+    <div id="game-wrap" class="col-md-6 mx-auto align-it-center">
+        <div class="instruction-card align-it-center">
+            <h5 class="instruction-label align-it-center">Instructions</h5>
+            <p class="align-it-center">Press <strong class="text-">PLAY</strong> to begin a new game.</p>
+            <!--<p>Press <strong class="text-success">Enter</strong> to submit your attempt.</p>-->
+            <p class="align-it-center"> <strong>All riddles have a one word answer.</strong> There is no time limit for your response. There is unlimited attempts at each riddle. If at any time you get stuck type "help1" or "help2" if you want to give up, just type "I give up" in
+                the answer box. There is a total of 20 questions to beat RiddleTwister2.0 enjoy!</p>
         </div>
     </div>
-    
-    <!----wrap---->
-<div id="game-wrap" class="col-md-6 mx-auto align-it-center">
-    <div class="instruction-card align-it-center">
-        <h5 class="instruction-label align-it-center">Instructions</h5>
-        <p class="align-it-center">Press <strong class="text-">PLAY</strong> to begin a new game.</p>
-        <!--<p>Press <strong class="text-success">Enter</strong> to submit your attempt.</p>-->
-        <p class="align-it-center"> <strong>All riddles have a one word answer.</strong> There is no time limit for your response. There is unlimited attempts at each riddle. If at any time you get stuck type "help1" or "help2" if you want to give up, just type "I give up" in the
-            answer box. There is a total of 20 questions to beat RiddleTwister2.0 enjoy!</p>
-    </div>
-</div>
 
 
 </body>
