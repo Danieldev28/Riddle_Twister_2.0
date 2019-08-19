@@ -1,26 +1,26 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static' , filename= 'css/main.css')}}"> 
+{% endblock %} 
+
+{% block content %}
 <div class="row margin-top">
     <div class="col-12">
-        <!--<form method="POST">-->
-        <!--<input type="text" id="answer-input" class="form-control form-control-lg adjust_input" name="player_name" placeholder="TYPE YOUR NAME HERE..." id="word-input" autofocus="">-->
-        <!--<input type="text" class="form-control text-center" name="player_name" id="player_name" placeholder="TYPE YOUR NAME HERE...">-->
-        <!--<button type="submit" class="col-md-12 btn btn-outline-success btn-round btn-custom">PLAY</button>-->
-        <!--<button type="button" class="btn btn-primary btn-lg btn-block">PLAY</button>-->
         <form method="POST" name="sentMessage" id="contactForm" novalidate>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                     <input name="name" type="text" class="form-control form-control-lg adjust_input text-center" placeholder="Enter Your Name Here..." id="name" autofocus="" required data-validation-required-message="Please enter your name.">
-                    <!--<p class="help-block text-danger"></p>-->
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-lg btn-block" id="sendMessageButton">Send</button>
+                       <a href="{{url_for('riddle_game')}}" > <button type="submit" class="btn btn-primary btn-lg btn-block" id="sendMessageButton">Send</button></a>
                     </div>
         </form>
         </div>
         </div>
     </div>
 </div>
-<!--python script for alert message for signup-->
+
+<!----------------python script for alert message for signup-->
 <div class="row">
     {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
     <h2> {{message}} </h2>
@@ -38,13 +38,3 @@
 </div>
 {% endblock %}
 
-<!---standard script for alert message signup with name(delete is not used later)->
-<!--<div>-->
-<!--    {% with messages = get_flashed_messages() %} {% if messages %}-->
-<!--<ul class="flashes">-->
-<!--    {% for message in messages %}-->
-<!--    <li>{{ message }}</li>-->
-<!--    {% endfor %}-->
-<!--</ul>-->
-<!--{% endif %} {% endwith %}-->
-<!--</div>-->

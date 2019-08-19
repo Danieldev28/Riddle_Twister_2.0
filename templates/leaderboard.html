@@ -2,15 +2,16 @@
 {% block content %}
 <h1>page 2 leaderboard</h1>
 <div class="row margin-top">
-        <div class="reveal col-9 text-center accordion">
+        <div class="reveal col-9 text-center">
             REVEAL PREVIOUS INCORRECT ANSWERS
         </div>
         <div class="col-3">
             <button id="btn-ia" class="btn" data-toggle="collapse" data-target="#incorrect-answers-table" aria-expanded="true">
                      <i class="fas fa-lg fa-toggle-on"></i>
-                </button>
+            </button>
         </div>
     </div>
+    
     <div id="incorrect-answers-table" class="collapsed collapse show" data-parent="#accordion" style="">
         <table class="table table-dark title text-center">
             <thead>
@@ -21,7 +22,7 @@
             </thead>
             <tbody>
                 
-            </tbody>
+            </tbody is="table-body">
         </table>
     </div>
     

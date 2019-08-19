@@ -50,8 +50,13 @@ input{
     font-family: 'Hind', sans-serif;
     
 }
+/*(fix css link to templates for styling)*/
+.instrucion-card {
+    color: white;
+}
 
 /*does not work as intended fix css later*/
 /*a:hover { */
 /*  background-color: yellow;*/
 /*}*/
+
