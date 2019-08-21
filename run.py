@@ -1,5 +1,7 @@
 import os
-from flask import Flask, render_template , request ,flash
+from flask import Flask, render_template , request ,flash, jsonify
+import json
+import random
 
 app = Flask(__name__)
 app.secret_key= "secret_word"
@@ -10,7 +12,7 @@ def index():
     if request.method == "POST":
         flash("Thanks {} , next press play to begin".format
     (request.form["name"]))
-    return render_template("index.html" , page_title="RiddleTwister")
+    return render_template("index.html" , page_title="LoginRiddleTwister")
     
 @app.route('/leaderboard')
 def leaderboard():
@@ -19,17 +21,52 @@ def leaderboard():
 @app.route('/riddle_game')
 def riddle_game():
     return render_template("riddle_game.html" , page_title="riddle_game")
- 
+
+@app.route('/get_riddle_api' , methods=["GET", "POST"])
+def get_riddle_api():
+    f = open("questions.txt", "r")
+    all_questions = f.readlines()
+    single_question = all_questions[random.randint(0, len(all_questions))]
+    f.close()
+    return jsonify(single_question.rstrip())
+
+@app.route('/get_answer_api' , methods=["GET", "POST"])
+def get_answer_api():
+    all_params = request.args
+    index = 0
+    question = all_params['question'].replace('"', '')
+    answer = all_params['answer'].replace('"', '')
+    f = open("questions.txt", "r")
+    all_questions = f.readlines()
+    for quest in all_questions:
+        if question.rstrip() == quest.rstrip():
+            index = all_questions.index(quest)
+            print(type(quest.rstrip()), "here")
+    f.close()
+    print(type(question), index)
+   
+    
+    fa = open("answers.txt", "r")
+    all_answers = fa.readlines()
+    fa.close()
+    print(answer.rstrip(),all_answers[index].rstrip().lower(), "both answers")
+    if (all_answers[index].rstrip().lower() == answer.rstrip().lower()):
+        return jsonify(True)
+    else:
+        return jsonify(False)
+    
+# print everything that that is there in the string to see what is there
+# break down the functionality of each step! for understanding
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
             debug=True)
 
-f = open("questions.txt", "w+")
-f.write("What gets wetter as it dries?\n What do you get when you cross an automobile with a household animal?\nWhat has a ring, but no finger?\nThree lives have I gentle enough to sooth the skin, light enough to caress the sky, hard enough to crack rocks\nThe one who makes it sells it,the one who buys it never uses it, the one who uses it never knows they use it. What is it?\nThe more you have of it the less you see. What is it?\n I am lighter then what I am made of, more of me is hidden then seen? What am I?\nWhen you have me, you feel like sharing me. But, if you do share me, you don't have me. What am I?\nSay my name and I dsiapear? What am I?\n I am always hungry, I must always be fed the finger I touch will soon turn red?\nForward im heavy but backword im not. What am I?\nI know a word of letters three, add two,and fewer there will be?\nWhen young I am sweet in the sun. When middle aged, I make you gay. When old I am valued more then ever.\nWhen set loose I fly away Never so cursed, as when I go astray. What am I?\nI drive men mad for love of me. Easliy beaten. Never free.\nI reach for the sky but clutch to the ground, Sometimes I leave but I’m always around. What am I?\nAlways in you , sometimes on you. If I surround you I can kill you what am I?\n What can point in every single direction but can reach the destination by itself?\nWhen you give me to others you have to keep me What am I?\nWhich letter of the alphabet has the most water?")
+f = open("questions.txt", "r")
+f.readlines()
 f.close()
 
-f =open("answers.txt", "w+")
-f.write("towel\ncarpet\ntelephone\nwater\ncoffin\ndarkness\niceberg\nsecret\nsilence\nfire\nton\nfew\ngrapes\nfart\ngold\ntree\nwater\nfinger\npromise\nC")
+f = open("answers.txt", "r")
+f.readlines()
 f.close()
