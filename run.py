@@ -15,12 +15,23 @@ def index():
     return render_template("index.html" , page_title="LoginRiddleTwister")
     
 @app.route('/leaderboard')
+# # # incorrect code!
 def leaderboard():
+# #     all_params = request.args
+# #     username = all_params['username']
+# #     score = all_params['score']
+# #     f = open("response.txt", "r")
+# #     winners = f.readlines()
+# #     for i in range (len(winners)):
+# #     print(wordlist[i])
+    # f.close()
     return render_template("leaderboard.html" , page_title="leaderboard")
     
-@app.route('/riddle_game')
+@app.route('/riddle_game', methods=["GET", "POST"])
 def riddle_game():
-    return render_template("riddle_game.html" , page_title="riddle_game")
+    args = request.args
+    print(args['username'])
+    return render_template("riddle_game.html" , page_title="riddle_game", user=args['username'])
 
 @app.route('/get_riddle_api' , methods=["GET", "POST"])
 def get_riddle_api():
@@ -58,6 +69,22 @@ def get_answer_api():
 # print everything that that is there in the string to see what is there
 # break down the functionality of each step! for understanding
 
+@app.route('/get_username_and_score_api', methods=["GET", "POST"])
+def get_username_and_score_api():
+    all_params = request.args
+    username = all_params['username']
+    score = all_params['score']
+    f = open("response.txt", "a")
+    f.write(username + "\n")
+    f.write(score + "\n")
+    f.close
+    return jsonify("True")
+    
+    
+    
+
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
@@ -70,3 +97,12 @@ f.close()
 f = open("answers.txt", "r")
 f.readlines()
 f.close()
+
+f = open ("response.txt", "a")
+f.write()
+f.close
+
+# f = open ("hint.txt","w")
+# f.write("bathroom item\n","combines two words\n","used for communication\n","you need it to survive\n",
+# "vampire\n","In the absence of light you have...\n","sunk the titanic\n","military covert mission\n")
+# f.close

@@ -1,29 +1,31 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <h1>page 2 leaderboard</h1>
 <div class="row margin-top">
-        <div class="reveal col-9 text-center">
-            REVEAL PREVIOUS INCORRECT ANSWERS
-        </div>
-        <div class="col-3">
-            <button id="btn-ia" class="btn" data-toggle="collapse" data-target="#incorrect-answers-table" aria-expanded="true">
-                     <i class="fas fa-lg fa-toggle-on"></i>
-            </button>
-        </div>
-    </div>
-    
-    <div id="incorrect-answers-table" class="collapsed collapse show" data-parent="#accordion" style="">
-        <table class="table table-dark title text-center">
-            <thead>
-                <tr>
-                    <th scope="col">PLAYER NAME</th>
-                    <th scope="col">WRONG ANSWER</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody is="table-body">
-        </table>
-    </div>
-    
+    <!--<div class="reveal col-9 text-center">-->
+    <!--    REVEAL PREVIOUS ANSWERS-->
+    <!--</div>-->
+    <!--<div class="col-3">-->
+    <!--    <button id="btn-ia" class="btn" data-toggle="collapse" data-target="#incorrect-answers-table" aria-expanded="true">-->
+    <!--             <i class="fas fa-lg fa-toggle-on"></i>-->
+    <!--    </button>-->
+    <!--</div>-->
+</div>
+
+<div id="incorrect-answers-table" class="collapsed collapse show" data-parent="#accordion" style="">
+    <table class="table table-dark title text-center">
+        <thead>
+            <tr>
+                <th scope="col">PLAYER NAME</th>
+                <th scope="col">SCORE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">Username</td>
+                    <td>Score</td>
+            </tr>
+        </tbody is="table-body">
+    </table>
+</div>
+
 {% endblock %}

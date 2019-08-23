@@ -1,11 +1,14 @@
 {% extends 'base.html' %} {% block head %}
-<link rel="stylesheet" type="text/css" href="{{url_for('static' , filename= 'css/main.css')}}"> {% endblock %} {% block content %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static' , filename= 'css/main.css')}}"> 
+<script type="text/javascript" src="{{url_for('static' , filename= 'main.js')}}"></script>
+{% endblock %} {% block content %}
 <div class="row margin-top">
     <div class="col-12">
         <form method="POST" name="sentMessage" id="contactForm" novalidate>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                    <input name="name" type="text" class="form-control form-control-lg adjust_input text-center" placeholder="Enter Your Name Here..." id="name" autofocus="" required data-validation-required-message="Please enter your name.">
+                    <input name="name" onfocusout = "save_username()" type="text" class="form-control form-control-lg adjust_input text-center" placeholder="Enter Your Name Here..." id="name" autofocus="" required data-validation-required-message="Please enter your name.">
+                    <input name="email" type="text" class="form-control form-control-lg adjust_input text-center" placeholder="Enter Your Email Here..." id="email" autofocus="" required data-validation-required-message="Please enter your email.">
                     <div class="form-group">
                         <a href="{{url_for('riddle_game')}}"><button type="submit" class="btn btn-primary btn-lg btn-block" id="sendMessageButton">Send</button></a>
                     </div>
@@ -14,6 +17,13 @@
         </div>
     </div>
 </div>
+<script>
+    
+    // document.getElementById("name").onfocusout = save_username();
+    
+
+
+</script>
 
 <!----------------python script for alert message for signup-->
 <div class="row">
@@ -26,7 +36,7 @@
   </button>
     </div>
     <script>
-        window.location.href = "{{url_for('riddle_game')}}"
+        window.location.href = "{{url_for('riddle_game')}}" + "?username=" + localStorage.getItem("username");
     </script>
     {% endfor %} {% endif %} {% endwith %}
 </div>
