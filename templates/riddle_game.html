@@ -49,17 +49,18 @@
         var answer = document.getElementById("name1").value
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                alert("with this" + this.responseText + "find this");
+                // alert("with this" + this.responseText + "find this");
                 if (this.responseText.toLowerCase().replace("\n", "") == "true") {
-                    alert("correct")
+                    // alert("correct")
                     score += 1
                     $("#name1").val("");
                     get_question();
                 }
                 else {
-                    alert("You lost the game");
-                    alert(score);
+                    // alert("You lost the game");
+                    // alert(score);
                     get_username_and_score_api("{{user}}" , score);
+                    window.location.href = "{{url_for('leaderboard')}}"
                 }
 
                 // document.getElementById("current-riddle").innerHTML = this.responseText;

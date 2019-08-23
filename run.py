@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template , request ,flash, jsonify
 import json
 import random
+import numpy
 
 app = Flask(__name__)
 app.secret_key= "secret_word"
@@ -17,15 +18,33 @@ def index():
 @app.route('/leaderboard')
 # # # incorrect code!
 def leaderboard():
-# #     all_params = request.args
-# #     username = all_params['username']
-# #     score = all_params['score']
-# #     f = open("response.txt", "r")
-# #     winners = f.readlines()
-# #     for i in range (len(winners)):
-# #     print(wordlist[i])
-    # f.close()
-    return render_template("leaderboard.html" , page_title="leaderboard")
+    username = []
+    score =[]
+    final_user_list = []
+    all_params = request.args
+    f = open("response.txt", "r")
+    winners = f.readlines()
+    f.close()
+    for i in range (0,len(winners)):
+    #  print(winners[i])
+        if (i % 2 == 0):
+            # print(winners[i],"username")
+            username.append(winners[i].replace('\n', ''))
+        else:
+            # print(winners[i],"score")
+            score.append(int(winners[i].replace('\n', '')))
+    print(username, score)
+    origional_index_of_score = numpy.argsort(score)
+    score = sorted(score)
+    for index in origional_index_of_score:
+         final_user_list.append(username[index])
+    print(final_user_list, score)
+    if len(score) <= 10:
+        return render_template("leaderboard.html" , page_title="leaderboard", userlist = final_user_list, user_score = score)
+    else:
+        score = score[-10:]
+        final_user_list = final_user_list[-10:]
+        return render_template("leaderboard.html" , page_title="leaderboard", userlist = final_user_list, user_score = score)
     
 @app.route('/riddle_game', methods=["GET", "POST"])
 def riddle_game():

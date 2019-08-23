@@ -20,10 +20,12 @@
             </tr>
         </thead>
         <tbody>
+            {% for i in range(user_score|length )|reverse %}
             <tr>
-                <td scope="row">Username</td>
-                    <td>Score</td>
+                <td scope="row">{{userlist[i]}}</td>
+                    <td>{{user_score[i]}}</td>
             </tr>
+            {% endfor %}
         </tbody is="table-body">
     </table>
 </div>
