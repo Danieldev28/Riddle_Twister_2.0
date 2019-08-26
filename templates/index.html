@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block head %}
-<link rel="stylesheet" type="text/css" href="{{url_for('static' , filename= 'css/main.css')}}"> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static' , filename= 'css/main.css')}}">
 <script type="text/javascript" src="{{url_for('static' , filename= 'main.js')}}"></script>
 {% endblock %} {% block content %}
 <div class="row margin-top">
@@ -7,7 +7,7 @@
         <form method="POST" name="sentMessage" id="contactForm" novalidate>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                    <input name="name" onfocusout = "save_username()" type="text" class="form-control form-control-lg adjust_input text-center" placeholder="Enter Your Name Here..." id="name" autofocus="" required data-validation-required-message="Please enter your name.">
+                    <input name="name" onfocusout="save_username()" type="text" class="form-control form-control-lg adjust_input text-center" placeholder="Enter Your Name Here..." id="name" autofocus="" required data-validation-required-message="Please enter your name.">
                     <div class="form-group">
                         <a href="{{url_for('riddle_game')}}"><button type="submit" class="btn btn-primary btn-lg btn-block" id="sendMessageButton">Send</button></a>
                     </div>
@@ -17,10 +17,6 @@
     </div>
 </div>
 <script>
-    
-    // document.getElementById("name").onfocusout = save_username();
-    
-
 
 </script>
 
@@ -41,10 +37,12 @@
 </div>
 <div id="data"></div>
 
- <!--<div id="sfx-player">-->
- <!--   <audio id="gameSoundPlayer" controls>-->
- <!--   <source src="/static/audio/right.wav" type="audio/mpeg">-->
- <!--   Your browser does not support the audio element.-->
- <!--   </audio>-->
- <!-- </div>-->
+<!---sndfx---------------->
+
+<!--<div id="sfx-player">-->
+<!--   <audio id="gameSoundPlayer" controls>-->
+<!--   <source src="/static/audio/right.wav" type="audio/mpeg">-->
+<!--   Your browser does not support the audio element.-->
+<!--   </audio>-->
+<!-- </div>-->
 {% endblock %}

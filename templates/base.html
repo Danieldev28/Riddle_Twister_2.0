@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% block head %} {% endblock %}
-    <!--<link href="https://fonts.googleapis.com/css?family=Hind|Lexend+Mega|Roboto+Slab&display=swap" rel="stylesheet">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {% block head %} {% endblock %}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -26,24 +24,23 @@
             <a class="menuitem" id="login" href="/"><i class="fas fa-sign-in-alt"></i> Login</a>
             <a class="menuitem" href="{{url_for('leaderboard')}}"><i class="fa fa-list-ol"></i> Leaderboard</a>
         </nav>
-        
+
     </header>
-     <div class="container">
-       
-       {% block content %} {% endblock %}
+    <div class="container">
+
+        {% block content %} {% endblock %}
     </div>
 
 
     <div class="container margin-top">
-       
+
     </div>
 
-    <!----wrap---->
+    <!----gamewrap---->
     <div id="game-wrap" class="col-md-6 mx-auto align-it-center">
         <div class="instruction-card align-it-center">
             <h5 class="instruction-label align-it-center">Instructions</h5>
             <p class="align-it-center">Press <strong class="text-">PLAY</strong> to begin a new game.</p>
-            <!--<p>Press <strong class="text-success">Enter</strong> to submit your attempt.</p>-->
             <p class="align-it-center font-color"> <strong>All riddles have a one word answer.</strong> There is no time limit for your response. There is unlimited attempts at each riddle. If at any time you get stuck type "help1" or "help2" if you want to give up, just type "I give up" in
                 the answer box. There is a total of 20 questions to beat RiddleTwister2.0 enjoy!</p>
         </div>

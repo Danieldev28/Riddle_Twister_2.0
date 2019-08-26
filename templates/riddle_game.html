@@ -1,23 +1,20 @@
 {% extends 'base.html' %} {% block head %}
-<link rel="stylesheet" type="text/css" href="{{url_for('static' , filename= 'css/main.css')}}"> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static' , filename= 'css/main.css')}}">
 <script type="text/javascript" src="{{url_for('static' , filename= 'main.js')}}"></script>
 {% endblock %} {% block content %}
 <div class="row margin-top">
     <div class="col-12">
-        <!--<form method="POST" name="sentMessage" id="contactForm" novalidate>-->
         <div class="control-group">
             <div class="form-group floating-label-form-group controls">
                 <h2 class="display-4 mb-5 instruction-card font-hind" id="current-riddle">Get Ready...</h2>
                 <input name="name" type="text" class="form-control form-control-lg adjust_input text-center" placeholder="Submit Your Answer Here..." id="name1" autofocus="" required data-validation-required-message="Please enter your name.">
-                <!--<p class="help-block text-danger"></p>-->
                 <div class="form-group">
                     <button type="submit" onclick="check_answer()" class="btn btn-primary btn-lg btn-block" id="sendMessageButton">PLAY</button>
-
-
                 </div>
                 <button type="submit" class="btn btn-danger btn-lg btn-block" id="sendMessageButton">GIVE ME A HINT</button>
 
             </div>
+            
             <!--</form>-->
 
         </div>
@@ -36,11 +33,10 @@
         };
 
         xhr.open("GET", "https://a1cf5fddf9204e8c8bced47b6ad6c607.vfs.cloud9.us-east-1.amazonaws.com/get_riddle_api");
-        // xhr.open("GET", "https://a1cf5fddf9204e8c8bced47b6ad6c607.vfs.cloud9.us-east-1.amazonaws.com/get_answer_api");
         xhr.send();
     }
     get_question();
-
+// api call to verify answer against user input------->
     score = 0
 
     function check_answer() {
@@ -62,11 +58,11 @@
                     alert("this is your hint2")
                     alert("You lost the game modal");
                     alert(score);
-                    get_username_and_score_api("{{user}}" , score);
+                    get_username_and_score_api("{{user}}", score);
                     window.location.href = "{{url_for('leaderboard')}}"
                 }
 
-                // document.getElementById("current-riddle").innerHTML = this.responseText;
+
             }
         };
 
@@ -75,7 +71,7 @@
     }
 
     // response api for username and answer-------
-    function get_username_and_score_api(username , score) {
+    function get_username_and_score_api(username, score) {
         var xhr = new XMLHttpRequest();
 
         xhr.onreadystatechange = function() {

@@ -1,33 +1,19 @@
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
- ----------------------------------------------------------------- 
 
+       ____   _      __     __ __       __             _        __               __ ___      ____ 
+      / __ \ (_)____/ /____/ // /___   / /_ _      __ (_)_____ / /_ ___   _____ / /|__ \    / __ \
+     / /_/ // // __  // __  // // _ \ / __/| | /| / // // ___// __// _ \ / ___// / __/ /   / / / /
+    / _, _// // /_/ // /_/ // //  __// /_  | |/ |/ // /(__  )/ /_ /  __// /   /_/ / __/ _ / /_/ / 
+   /_/ |_|/_/ \__,_/ \__,_//_/ \___/ \__/  |__/|__//_//____/ \__/ \___//_/   (_) /____/(_)\____/  
+                                                                                                  
 
-Hi there! Welcome to AWS Cloud9!
-
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
-
-Happy coding!
-
-" 9 Say my name and I dsiapear? What am I?" , " 10 I am always hungry, I must always be fed the finger I touch will soon turn red?" , "11 Forward im heavy but backword im not. What am I?" ,"12 I know a word of letters three, add two,and fewer there will be" 
-# , "13 When young I am sweet in the sun.  When middle aged, I make you gay. When old I am valued more then ever." , " 14 When set loose I fly away Never so cursed, as when I go astray. What am I?" , "15 I drive men mad for love of me. Easliy beaten . Never free." ," 16 I reach for the sky but clutch to the ground, Sometimes I leave but I’m always around. What am I?" , "17 Always in you , sometimes on you. If I surround you I can kill you what am I?" , "18 What can point in everysingle direction but can reach the destination by itself?" 
-# ,"19 When you give me to others you have to keep me What am I?", "Which letter of the alphabet has the most water?)
-
-("What gets wetter as it dries?\n What do you get when you cross an automobile with a household animal?\nWhat has a ring, but no finger?\nThree lives have I gentle enough to sooth the skin,light enough to caress the sky, hard enough to crack rocks\nThe one who makes it sells it,the one who buys it never uses it, the one who uses it never knows they use it. What is it?\nThe more you have of it the less you see. What is it?\n I am lighter then what I am made of, more of me is hidden then seen? What am I?\nWhen you have me, you feel like sharing me. But, if you do share me, you don't have me. What am I\nSay my name and I dsiapear? What am I?\n I am always hungry, I must always be fed the finger I touch will soon turn red?\nForward im heavy but backword im not. What am I?\nI know a word of letters three, add two,and fewer there will be?\nWhen young I am sweet in the sun.  When middle aged, I make you gay. When old I am valued more then ever.\nWhen set loose I fly away Never so cursed, as when I go astray. What am I?\nI drive men mad for love of me. Easliy beaten . Never free.\nI reach for the sky but clutch to the ground, Sometimes I leave but I’m always around. What am I?\nAlways in you , sometimes on you. If I surround you I can kill you what am I?\n18 What can point in everysingle direction but can reach the destination by itself?\nWhen you give me to others you have to keep me What am I?\nWhich letter of the alphabet has the most water?")
-
-https://a1cf5fddf9204e8c8bced47b6ad6c607.vfs.cloud9.us-east-1.amazonaws.com/get_riddle_api
-"https://a1cf5fddf9204e8c8bced47b6ad6c607.vfs.cloud9.us-east-1.amazonaws.com/get_username_and_score_api?username=" + username +  "&score=" + score
 
 <a name="top"></a>
 # Daniel Smith Portfolio 
 
-Welcome to my portfolio interactive front end development application! 
-My name is Daniel, and through this project I am excited present to you roughly 
-six weeks of app development in the making.
+Welcome to my practical python project! 
+My name is Daniel, and through this project I am excited present to you a prject based on 
+python fundamentals but also includes the full-stack of technologies from javascript in the forntened to 
+python in the backend.
 
 # Technologies
 
@@ -37,104 +23,107 @@ six weeks of app development in the making.
 4.Javascript
 5.Fontawsome
 6.Jquery library
-7.Emailjs
-8.Google Api
-9.Merriam dictionary Api
+8.Api
+9.python
+10.jinja 
+11.flask
+12.google fonts
 
 # Features
-This project has a very simple design with a navigation menu along the top
-and subcategory menu, that reveals professionally once clicked by the user.I
-am very proud of the fact that the html and css markup came together and was 
-designed to be simple on the surface. But have depth when the user wants to 
-engage and have more options for their match, thus improving user experience.
+This project feutrues a design that implements a simple catoon feel, with easy 
+navigation. I intended for this to be a pick up and play game that allowed the 
+user to play as long as they felt without time restrictions. But at the same 
+time add a competative edge to the game in order to make it fun for everyone 
+who plays.
 ## Features Left To Implement
 
-The features which I would like to implement, would be to add a short tutorial
-at the beginning of the game. This would introduce the games speacial features
-and allow smoother gameplay for a new user. Also a modal to display best score 
-to the user in a modal box after restart of their current match. As well as 
-coloring the random category button, vocabulary button, and god mode button 
-differently to distinguish them as special categories to the player. Finally to 
-place the app in the google playstore store with my logo <a href ="assets/images/wordbeatit-yellow.jpg">
-here.<a> Intial testing of the game as an app was very successful
-and the game displayed very well on the android device.
+The features which I would like to implement, is a three chance logic which 
+enabled users to recieve a up to two hints per questions. This feature would 
+utilize apis and javascript in order to interact with the the user and provide 
+valuable hints to move the game forwards and allow them to progress to the next 
+level with tricky questions.
+
 
 # UX
 
 My goal with ux design was to make sure that my application was as user friendly 
-and easy to navigate as possible. I strived to make a user interface that could 
-be up and running with as little as 1-2 clicks. I belive that I have achieved this 
-through default mode of the game, which starts with a five second timer
-to input the correct word shown.
+and as easy to navigate as possible. I was aiming to create an interface that 
+was easy on the eyes and added to the vibe and feel of a classic arcade style 
+game; through the use of font styles and color themes.
 
 Through this project I strived to demonstrate the basics of user friendly 
-interface by adding interaction where people expect it,ie. a modal popup 
-that prompts the user to follow the steps prior to clickng start match for 
-a more meaningful experience. As well as using colors that were appealing to the 
-eyes, that kept the application sleek but at the same time provided 
-a unique gameplay style and feel from other games in the same category. This in 
-my opinion is what seperates my game from the competators; and makes it stand out
-as a clear winner in the marketplace.
+interface by adding interaction where people expect it,ie. an input form greets 
+the user as they sign in with their name. Once signed in they can get comfortable 
+with their first question and progress through levels with different difficulty 
+of questions. They questions are automatically displayed once; if they are 
+correct on the first attempt you recieve your scor and move to the next level
+if not you are automatically 
 
 # Testing
 Some of the trials I encountered while testing and updating, were ranging from
-the very basic to difficult. I seemed have trouble in the beginning articulating
-my ideas into actual code that I wanted to implement into the project(the logic). 
-Through use of javascript logic and pseudocoding I was able to define a path for the 
-game application and as a result, address the events that would happen during gameplay 
-and when they would happen. This logic formed the basics of the algorithmn for the 
-application. 
-These events include:
-#### Algorithmn
+the very basic to difficult. During the testing phase I found it really strait 
+forwards , in terms of approach of how I would create the game. With a game page,
+flask framework and a leadership board. But my difficulities lie with creating,
+the actual api calls from the front end through javascript in order to access
+apis database files in the backened.
 
-1.click start match else game starts
-2. category selection onclick appears and rest appear inactive
-3. countdown timer 3 seconds on start of game
-4. add a stopwatch to start the match
-5. from data set selected he should see a random word from that category selected.
-6. game starts
-7. from word selected show the word to user and start timer at the same time
-8. when timer ends check text against correct answer stored
-9. if win, clear users text bring another random word and display it to the user
-10. Save the correct user inputs in an array and save the level in a variable
-11. if lose, check the length of array that contains the right words-- if empty
-display-- you didnt get the word correct try again
-12. switch and case through each array category selection (iterate) EXCLUDING 
-VOCABULARY fetch the meaning from my own dictionary of terms.
-14. in case, of vocabulary get definition from api call
-15. display at the bottom (table style) word and definition in a row and column
-16. on.document load set value to 0 after that the scores should add up.If 
-refreshing everything loads to a fresh page.
-17.make a function for else contained in the function initiate -game
-then call the function in the else statement
+These events include:
+#### Algorithmn//Logic Used
+
+1. Enter your username and click send!
+2. Question and answers being saved in a txt file
+3. Create a an api functions (fetch questions from the question file as a list)
+4. Randomly select a question 
+5. return  the question
+6. 2nd api call send the question & the anser to this api (backened)
+4. takes question fetched from the file to match answer
+5. If he gets the answer you will increment his points
+6. correct return true incorrect return false
+6. Logic verification( save question in a variable)
+7. save answers in a variable
+8. Read question fiel as readlines
+9. find the index of the question close the file
+10.then read the anser file as readlinesfind the answers on the smae index
+11.close the answer filecheck the answer file
+12.check if the user answer is == to answer in the answer sheet
+13.return true if ==
+14.return false if !=
+15.create and api to save the score
+16.extract the username and score  save it, in a txt file
+17.call with two parameters username and score in python
+18.Leaderboard 
+19.open file response.txtread file readlines save in variable
+20.check lenvariable 
+21.if not ==0 check if length is =<20
+22.pick all of them iterate through list length
+23.if divisible by 2 it equals the username if not divisible by two it equals the score
+24.create a dictionary of each user name and score one at a time
+25.Logic for show leaderboard
+26.read the file of score seperate the score and user in seperate list
+even number username and odd number is score
 
 Sources:
-https://www.codecademy.com/articles/glossary-html
+https://github.com/neon-flights/riddle-game
+https://www.riddles.com
 https://www.w3schools.com/tags/
 stackoverflow.com
-jsfiddle.com
-(github repository) https://bousbissikouceila.github.io/speedTypingGame/
+http://brainden.com/logic-riddles.htm
+
 
 
 # Deployment
 
-This cite is hosted from Github directly from the master branch.
+This cite is hosted from heroku 
 You may access the file through,
 
-https://danieldev28.github.io/Wordbeatit_Typing_Game/
+https://riddletwister-2.herokuapp.com/
+https://danieldev28.github.io/Riddle_Twister_2.0/
 
-During my class and while working in a small group we were able to bring
-testers in to test the game. They  provided valuable feedback, in order upgrade 
-the games capabilities in order to match real world demands of a player. I 
-enjoyed this process because I could see how a person would interact, when,
-and why they did certain things live in person. I even tried breaking the game
-after this to ensure that all the bugs from the previous verson were 
-fixed and that my logic was not flawed.
 
 # Credits 
 I would like to credit numerous cites for inspiration in ux design as I could 
 not have done this with inspiration and at times a little persperation. Cites 
-used for application inspiration <a href="https://www.typing.com/">here.</a> 
+used for application inspiration <a href="https://www.sporcle.com/games/gundam743/50_riddles">here.</a> 
 I would also like to credit the stackoverflow community for any methods and 
 code snippets used, it was a really awesome resource to roll up my sleeves and 
 learn on the website.
@@ -142,22 +131,20 @@ learn on the website.
 # Media 
 
 Any media you see inside this web application was created by yours truly
-a.k.a me. Fonts were borrowed and inspired by <a href ="https://zeraxas.github.io/Word-Beater/">
-here.</a> Many challenges were faced during the creation of this application 
-but I learned that there is almost always a solotion for everything or a 
-workaround. I overcame many of them through the help of my mentor Abhay Barthwal. 
-My countdown timer uses digtal-7 webfont kit to give it a very nice digital 
-display from <a href ="https://www.dafont.com/digital-7.font">here.</a>
-
+a.k.a me. Fonts were borrowed from google fonts. Many challenges were faced 
+during the creation of this application but I learned that there is almost always
+a solotion for everything or a workaround. I overcame many of them through the 
+help of my mentor Abhay Barthwal. 
 ## Acknowledgements
 
 I would like to acknowledge the use of bootstrap components. As well as 
 w3schools.com for when I got stuck. I also searched stackoverflow.com countless
 times for more information to solve problems with my application when I was stuck 
-on the harder portions. I am thankful that my project is finally exactly as I  
-had envsioned, if not better.  Thank you for viewing this presentation of my HTML,
-CSS, Bootstrap, and javascript practical application to a real project I enjoyed 
-making it and sharing it and hope to present more to you in the future.Until then 
-that wraps up my skills as as a brand new front-end web developer.
+on the harder portions. Although the project was very close to my vision I would add 
+some future additions. Thank you for viewing this presentation of my HTML,
+CSS, Bootstrap, javascript and python practical application to a real working 
+project. I enjoyed making it and sharing it and hope to present more to you in 
+the future.Until then that wraps up my skills as as a brand new full-stack web 
+developer.
                                                 <a href="#top">Back to top</a>
 ### This is for educational use.
