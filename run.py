@@ -34,9 +34,9 @@ def leaderboard():
             # print(winners[i],"score")
             score.append(int(winners[i].replace('\n', '')))
     print(username, score)
-    origional_index_of_score = numpy.argsort(score)
+    original_index_of_score = numpy.argsort(score)
     score = sorted(score)
-    for index in origional_index_of_score:
+    for index in original_index_of_score:
          final_user_list.append(username[index])
     print(final_user_list, score)
     if len(score) <= 10:
@@ -99,8 +99,7 @@ def get_username_and_score_api():
     f.close
     return jsonify("True")
     
-    
-    
+
 
 
 
@@ -121,7 +120,18 @@ f = open ("response.txt", "a")
 f.write()
 f.close
 
-# f = open ("hint.txt","w")
-# f.write("bathroom item\n","combines two words\n","used for communication\n","you need it to survive\n",
-# "vampire\n","In the absence of light you have...\n","sunk the titanic\n","military covert mission\n")
-# f.close
+f = open ("hint_1.txt","w")
+f.write("bathroom item\n","combines two words\n","used for communication\n","you need it to survive\n",
+"vampire\n","In the absence of light you have...\n","it sunk the titanic\n","no one knows...\n","a loss of words\n"
+,"oxygen,heat,fuel\n","the weight of a small car\n","only a little left\n","a fruit for roman kings\n"
+,"a hydrogen sulfide gas\n","a precious metal\n","they give us free oxygen\n","we would not survive more then week without it\n"
+,"you use it to point\n","something you make on ayour wedding day\n","more then eighty percent of the earth is covered in it\n")
+f.close
+
+f = open ("hint_2.txt","w")
+f.write("you use it to dry off\n","soft under your toes\n","a device\n","the human body is made up 50%-75% of it\n",
+"zombies rise from the dead\n","power outage\n","exist in the arctic\n","top secret\n","nothing to say\n"
+,"leaves a path of chared pieces\n","african forest elephant\n","survivers\n","turn into raisins when dried\n"
+,"whoopy cushion\n","low quatity high demand\n","a place where monkeys live\n","low supply in the desert\n"
+,"used to pick things up\n","best friends keep them\n","air,land and...\n")
+f.close

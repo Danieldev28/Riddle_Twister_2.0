@@ -51,14 +51,17 @@
             if (this.readyState == 4 && this.status == 200) {
                 // alert("with this" + this.responseText + "find this");
                 if (this.responseText.toLowerCase().replace("\n", "") == "true") {
-                    // alert("correct")
+                    alert("correct sndfx")
+                    alert("correct modal")
                     score += 1
                     $("#name1").val("");
                     get_question();
                 }
                 else {
-                    // alert("You lost the game");
-                    // alert(score);
+                    alert("this is your hint1")
+                    alert("this is your hint2")
+                    alert("You lost the game modal");
+                    alert(score);
                     get_username_and_score_api("{{user}}" , score);
                     window.location.href = "{{url_for('leaderboard')}}"
                 }
@@ -89,6 +92,8 @@
         xhr.send();
     };
 </script>
+
+
 
 
 
