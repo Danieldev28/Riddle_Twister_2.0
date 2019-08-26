@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h1>page 2 leaderboard</h1>
 <div class="row margin-top">
-    <!--the leaderboard------------->
+    <!---------the leaderboard which retrives score and username dynamically------------->
 </div>
 
 <div id="incorrect-answers-table" class="collapsed collapse show" data-parent="#accordion" style="">
@@ -16,7 +16,7 @@
             {% for i in range(user_score|length )|reverse %}
             <tr>
                 <td scope="row">{{userlist[i]}}</td>
-                    <td>{{user_score[i]}}</td>
+                <td>{{user_score[i]}}</td>
             </tr>
             {% endfor %}
         </tbody is="table-body">

@@ -1,17 +1,15 @@
 
-       ____   _      __     __ __       __             _        __               __ ___      ____ 
+
       / __ \ (_)____/ /____/ // /___   / /_ _      __ (_)_____ / /_ ___   _____ / /|__ \    / __ \
      / /_/ // // __  // __  // // _ \ / __/| | /| / // // ___// __// _ \ / ___// / __/ /   / / / /
     / _, _// // /_/ // /_/ // //  __// /_  | |/ |/ // /(__  )/ /_ /  __// /   /_/ / __/ _ / /_/ / 
    /_/ |_|/_/ \__,_/ \__,_//_/ \___/ \__/  |__/|__//_//____/ \__/ \___//_/   (_) /____/(_)\____/  
-                                                                                                  
-
-
+   
 <a name="top"></a>
 # Daniel Smith Portfolio 
 
 Welcome to my practical python project! 
-My name is Daniel, and through this project I am excited present to you a prject based on 
+My name is Daniel, and through this project I am excited present to you a project based on 
 python fundamentals but also includes the full-stack of technologies from javascript in the forntened to 
 python in the backend.
 
@@ -109,6 +107,13 @@ https://www.w3schools.com/tags/
 stackoverflow.com
 http://brainden.com/logic-riddles.htm
 
+google fonts used:
+font-family: 'Lexend Mega', sans-serif;
+
+font-family: 'Hind', sans-serif;
+
+font-family: 'Roboto Slab', serif;
+
 
 
 # Deployment
@@ -117,7 +122,8 @@ This cite is hosted from heroku
 You may access the file through,
 
 https://riddletwister-2.herokuapp.com/
-https://danieldev28.github.io/Riddle_Twister_2.0/
+<a href="https://danieldev28.github.io/Riddle_Twister_2.0/">Github Here</a>
+
 
 
 # Credits 

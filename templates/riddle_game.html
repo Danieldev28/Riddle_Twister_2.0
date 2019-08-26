@@ -14,8 +14,6 @@
                 <button type="submit" class="btn btn-danger btn-lg btn-block" id="sendMessageButton">GIVE ME A HINT</button>
 
             </div>
-            
-            <!--</form>-->
 
         </div>
     </div>
@@ -36,7 +34,8 @@
         xhr.send();
     }
     get_question();
-// api call to verify answer against user input------->
+
+    // api call to verify answer against user input------->
     score = 0
 
     function check_answer() {
@@ -45,24 +44,15 @@
         var answer = document.getElementById("name1").value
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                // alert("with this" + this.responseText + "find this");
                 if (this.responseText.toLowerCase().replace("\n", "") == "true") {
-                    alert("correct sndfx")
-                    alert("correct modal")
                     score += 1
                     $("#name1").val("");
                     get_question();
                 }
                 else {
-                    alert("this is your hint1")
-                    alert("this is your hint2")
-                    alert("You lost the game modal");
-                    alert(score);
                     get_username_and_score_api("{{user}}", score);
                     window.location.href = "{{url_for('leaderboard')}}"
                 }
-
-
             }
         };
 
@@ -70,7 +60,7 @@
         xhr.send();
     }
 
-    // response api for username and answer-------
+    // response api for username and answer------->
     function get_username_and_score_api(username, score) {
         var xhr = new XMLHttpRequest();
 
@@ -82,15 +72,9 @@
             }
         };
 
-
         xhr.open("GET", "{{url_for('get_username_and_score_api')}}" + "?username=" + username + "&score=" + score);
-
         xhr.send();
     };
 </script>
-
-
-
-
 
 {% endblock %}
